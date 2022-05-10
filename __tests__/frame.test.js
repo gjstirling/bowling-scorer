@@ -19,6 +19,15 @@ describe("Roll Method", function () {
     expect(frame.addRoll(5)).toEqual({error: "You can only knock over ten pins"});
   });
 
+  test('Raises error when users rolls for a third time', () => {
+    var frame = new Frame()
+    frame.addRoll(6)
+    frame.addRoll(2)
+    expect(frame.addRoll(1)).toEqual({error: "You cannot make three rolls"});
+  });
+
+
+
 
 
 
