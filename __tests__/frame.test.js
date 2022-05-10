@@ -13,6 +13,13 @@ describe("Roll Method", function () {
     expect(frame.addRoll(3)).toEqual([6,3]);
   });
 
+  test('Raises error when users enters a frame total > 10', () => {
+    var frame = new Frame()
+    frame.addRoll(6)
+    expect(frame.addRoll(5)).toEqual({error: "You can only knock over ten pins"});
+  });
+
+
 
 
 });
