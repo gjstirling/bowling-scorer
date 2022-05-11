@@ -24,14 +24,14 @@ describe("Bonus Method", function () {
 
     test('Adds bonus score when current frame is a spare', () => {
         var scorecard = new Scorecard()
-        scorecard.addFrame({rolls: [6,4]})
-        scorecard.addFrame({rolls: [6,0]})
+        scorecard.addFrame({rolls: [6,4], spare: true})
+        scorecard.addFrame({rolls: [6,0], spare: false})
         expect(scorecard.bonus(0)).toEqual(6);
     });
 
     test('Returns zero if no bonus for frame', () => {
         var scorecard = new Scorecard()
-        scorecard.addFrame({rolls: [6,3]})
+        scorecard.addFrame({rolls: [6,3], spare: false})
         expect(scorecard.bonus(0)).toEqual(0);
     });
 
