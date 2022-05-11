@@ -35,5 +35,12 @@ describe("Bonus Method", function () {
         expect(scorecard.bonus(0)).toEqual(0);
     });
 
+    test('Returns bonus when a strike is scored', () => {
+        var scorecard = new Scorecard()
+        scorecard.addFrame({rolls: [10,0], spare: true, strike: true})
+        scorecard.addFrame({rolls: [6,3], spare: false, strike: false})
+        expect(scorecard.bonus(0)).toEqual(9)
+    })
+
 })
 
