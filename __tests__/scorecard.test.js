@@ -1,5 +1,4 @@
 const Scorecard = require("../lib/scorecard");
-const Frame = require('../lib/frame');
 
 describe("addFrame Method", function () {
     
@@ -19,18 +18,19 @@ describe("score Method", function () {
     });
 
     test('Returns the total score of frames with spare', () => {
-        var scorecard = new Scorecard({rolls: [6,3]})
+        var scorecard = new Scorecard()
         scorecard.addFrame({rolls: [6,4], spare: true})
         scorecard.addFrame({rolls: [6,3], spare: false})
         expect(scorecard.score()).toEqual(25);
     })
 
     test('Returns the total score of frames with a strike', () => {
-        var scorecard = new Scorecard({rolls: [6,3]})
+        var scorecard = new Scorecard()
         scorecard.addFrame({rolls: [10,0], spare: false, strike: true})
         scorecard.addFrame({rolls: [6,3], spare: false, strike: false})
         expect(scorecard.score()).toEqual(28);
     })
+
 })
 
 describe("Bonus Method", function () {
@@ -54,6 +54,5 @@ describe("Bonus Method", function () {
         scorecard.addFrame({rolls: [6,3], spare: false, strike: false})
         expect(scorecard.bonus(0)).toEqual(9)
     })
-
 })
 
