@@ -29,5 +29,11 @@ describe("Bonus Method", function () {
         expect(scorecard.bonus(0)).toEqual(6);
     });
 
+    test('Returns zero if no bonus for frame', () => {
+        var scorecard = new Scorecard()
+        scorecard.addFrame({rolls: [6,3]})
+        expect(scorecard.bonus(0)).toEqual(0);
+    });
+
 })
 
