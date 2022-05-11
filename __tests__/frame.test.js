@@ -1,4 +1,4 @@
-const Frame = require("../lib/index");
+const Frame = require("../lib/frame");
 
 describe("Roll Method", function () {
 
@@ -25,10 +25,5 @@ describe("Roll Method", function () {
     frame.addRoll(2)
     expect(frame.addRoll(1)).toEqual({error: "You cannot make three rolls"});
   });
-
-
-
-
-
-
 });
+
