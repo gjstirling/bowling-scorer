@@ -18,6 +18,19 @@ describe("score Method", function () {
         expect(scorecard.score()).toEqual(9);
     });
 
+    test('Returns the total score of frames with spare', () => {
+        var scorecard = new Scorecard({rolls: [6,3]})
+        scorecard.addFrame({rolls: [6,4], spare: true})
+        scorecard.addFrame({rolls: [6,3], spare: false})
+        expect(scorecard.score()).toEqual(25);
+    })
+
+    test('Returns the total score of frames with a strike', () => {
+        var scorecard = new Scorecard({rolls: [6,3]})
+        scorecard.addFrame({rolls: [10,0], spare: false, strike: true})
+        scorecard.addFrame({rolls: [6,3], spare: false, strike: false})
+        expect(scorecard.score()).toEqual(28);
+    })
 })
 
 describe("Bonus Method", function () {
