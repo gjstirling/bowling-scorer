@@ -27,3 +27,24 @@ describe("Roll Method", function () {
   });
 });
 
+describe("Spare Method", function () {
+  
+  test('returns true when frame is a spare', () => {
+    var frame = new Frame()
+    frame.addRoll(6)
+    frame.addRoll(4)
+    expect(frame.isSpare()).toEqual(true);
+  });
+
+});
+
+describe("Strike Method", function () {
+  
+  test('returns true when frame is a strike', () => {
+    var frame = new Frame()
+    frame.addRoll(10)
+    expect(frame.isStrike()).toEqual(true);
+  });
+
+});
+

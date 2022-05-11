@@ -1,8 +1,9 @@
 const Scorecard = require("../lib/scorecard");
 const Frame = require('../lib/frame');
+// jest.mock('./frame');
 
 describe("addFrame Method", function () {
-
+    
     test('Can store a frame', () => {
         var scorecard = new Scorecard()
         var frame = new Frame 
@@ -23,4 +24,5 @@ describe("score Method", function () {
         scorecard.addFrame(frame)
         expect(scorecard.score()).toEqual(9);
     });
+
 })
