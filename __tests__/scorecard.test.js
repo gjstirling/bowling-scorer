@@ -46,7 +46,6 @@ describe("score Method", function () {
             scorecard.addFrame({rolls: [10,0], spare: false, strike: true})
         }
         scorecard.addFrame({rolls: [10,10,10], spare: false, strike: true})
-        console.log(scorecard);
         expect(scorecard.score()).toEqual(300);
     }) 
 
