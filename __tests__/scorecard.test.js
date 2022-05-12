@@ -30,7 +30,6 @@ describe("score Method", function () {
         scorecard.addFrame({rolls: [6,3], spare: false, strike: false})
         expect(scorecard.score()).toEqual(28);
     })
-
 })
 
 describe("Bonus Method", function () {
@@ -54,5 +53,14 @@ describe("Bonus Method", function () {
         scorecard.addFrame({rolls: [6,3], spare: false, strike: false})
         expect(scorecard.bonus(0)).toEqual(9)
     })
+
+    test('Returns bonus when a double is scored', () => {
+        var scorecard = new Scorecard()
+        scorecard.addFrame({rolls: [10,0], spare: false, strike: true})
+        scorecard.addFrame({rolls: [10,0], spare: false, strike: true})
+        scorecard.addFrame({rolls: [6,3], spare: false, strike: false})
+        expect(scorecard.bonus(0)).toEqual(20)
+    })
+
 })
 
