@@ -13,7 +13,6 @@ describe("addFrame Method", function () {
         for (let i = 0; i < 10; i++) {
             scorecard.addFrame("mock frame")
         }
-        console.log(scorecard)
         expect(scorecard.addFrame("mock frame")).toEqual(true);
     });
 })
