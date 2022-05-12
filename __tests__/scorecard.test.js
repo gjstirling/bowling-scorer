@@ -7,6 +7,15 @@ describe("addFrame Method", function () {
         scorecard.addFrame("mock frame")
         expect(scorecard.addFrame("mock frame")).toEqual("mock frame");
     });
+
+    test('Returns true when on last frame', () => {
+        var scorecard = new Scorecard()
+        for (let i = 0; i < 10; i++) {
+            scorecard.addFrame("mock frame")
+        }
+        console.log(scorecard)
+        expect(scorecard.addFrame("mock frame")).toEqual(true);
+    });
 })
 
 describe("score Method", function () {
@@ -29,7 +38,7 @@ describe("score Method", function () {
         scorecard.addFrame({rolls: [10,0], spare: false, strike: true})
         scorecard.addFrame({rolls: [6,3], spare: false, strike: false})
         expect(scorecard.score()).toEqual(28);
-    })
+    }) 
 })
 
 describe("Bonus Method", function () {
