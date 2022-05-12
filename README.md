@@ -1,6 +1,3 @@
-## The Task (Full outline)
-==========================
-
 Bowling Challenge
 =================
 
