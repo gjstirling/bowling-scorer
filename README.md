@@ -15,5 +15,5 @@ Below is some diagramming used to conceptulise the problem and create a foundati
 
 ### Features to add 
 
-A UI to interact with the application via command line
+A UI to interact with the application via command line <br>
 Adding edge cases for user trying to take extra rolls or rolls greater than 10. 
