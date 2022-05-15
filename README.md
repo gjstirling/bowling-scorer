@@ -7,4 +7,8 @@ Below is some diagramming used to conceptulise the problem and create a foundati
 
 ### Domain Model and notes
 
+<img alt="domainModel" src="public/DomainModel.png" width="500">&nbsp;&nbsp;&nbsp;
+
 ### Sequence Diagram
+
+<img alt="SequenceDiagram" src="public/SequenceDiagram.png" width="500">&nbsp;&nbsp;&nbsp;
