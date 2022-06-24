@@ -11,22 +11,6 @@ describe("Roll Method", function () {
     frame.addRoll(6);
     expect(frame.addRoll(3)).toEqual([6, 3]);
   });
-
-  // these tests need to be extracted into a game class
-
-  // test('Raises error when users enters a frame total > 10', () => {
-  //   var frame = new Frame()
-  //   frame.addRoll(6)
-  //   expect(frame.addRoll(5)).toEqual({error: "You can only knock over ten pins"});
-  // });
-
-  // test('Raises error when users rolls for a third time', () => {
-  //   var frame = new Frame()
-  //   frame.addRoll(6)
-  //   frame.addRoll(2)
-  //   expect(frame.addRoll(1)).toEqual({error: "You cannot make three rolls"});
-  // });
-
 });
 
 describe("Spare Method", function () {
